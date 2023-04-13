@@ -11,7 +11,7 @@ the visual recognition and multi-modal reasoning in one forward structure with a
  
 
 <p align="center">
-	<img src="./misc/LaConvNet.jpg" width="550">
+	<img src="./misc/LaConvNet.jpg" width="700">
 </p>
 
 
@@ -27,7 +27,7 @@ pip install cupy-cuda11x==11.6
 ## Data preparation
 
 -  Follow the instructions of  [DATA_PRE_README.md](https://github.com/luogen1996/SimREC/blob/main/DATA_PRE_README.md) to generate training data and testing data.
--  Download the pretrained weights of LaConvNet.   
+-  Download the pretrained weights of LaConvNet from here: [LaConvNetS](https://drive.google.com/file/d/1hTuAqJmTLqro01z2ZOGpm3iFO-CxaKB6/view?usp=share_link), [LaConvNetB](https://drive.google.com/file/d/1OL0bUdnGhobSqmqqxJpPfl27-30ZI3wU/view?usp=share_link).   
 
 ## Training and Evaluation 
 

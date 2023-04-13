@@ -83,9 +83,4 @@ python data_process.py --data_root $DATA_PREP --output_dir $DATA_PREP --dataset 
 ```
 ## Pretrained Weights
  
-We also provide the weights of LaConvNets that are pretrained on 0.2M images.
-
-| Pretrained Weights of Backbone       |                             Link                             |
-| ------------------------------------ | :----------------------------------------------------------: |
-| LaConvNetS                     | coming soon  |
-| LaConvNetB                    |coming soon  |
+We also provide the weights of LaConvNets that are pretrained on 0.2M images:  [LaConvNetS](https://drive.google.com/file/d/1hTuAqJmTLqro01z2ZOGpm3iFO-CxaKB6/view?usp=share_link), [LaConvNetB](https://drive.google.com/file/d/1OL0bUdnGhobSqmqqxJpPfl27-30ZI3wU/view?usp=share_link)

@@ -26,8 +26,7 @@ pip install cupy-cuda11x==11.6
 ```
 ## Data preparation
 
--  Follow the instructions of  [DATA_PRE_README.md](https://github.com/luogen1996/SimREC/blob/main/DATA_PRE_README.md) to generate training data and testing data.
--  Download the pretrained weights of LaConvNet from here: [LaConvNetS](https://drive.google.com/file/d/1hTuAqJmTLqro01z2ZOGpm3iFO-CxaKB6/view?usp=share_link), [LaConvNetB](https://drive.google.com/file/d/1OL0bUdnGhobSqmqqxJpPfl27-30ZI3wU/view?usp=share_link).   
+-  Follow the instructions of  [DATA_PRE_README.md](https://github.com/luogen1996/SimREC/blob/main/DATA_PRE_README.md) to prepare the necessary training data.
 
 ## Training and Evaluation 
 
@@ -38,6 +37,6 @@ python train.py --config ./config/config.yaml
 ```
 3. Test the model.   Then, you can run ` test.py`  by
 ```
-python test.py --eval-weights ./logs/simrec/1/weights/det_best.pth
+python test.py --eval-weights ./weights/det_best.pth
 ```
 4. Training log.  Logs are stored in ``./logs`` directory, which records the detailed training curve and accuracy per epoch. If you want to log the visualizations, please  set  ``LOG_IMAGE`` to ``True`` in ``config.yaml``.   

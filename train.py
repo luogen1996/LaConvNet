@@ -187,7 +187,7 @@ def main_worker(gpu,__C):
                   "==> epoch: {} lr: {} ".format(checkpoint['epoch'],checkpoint['lr']))
 
     if os.path.isfile(__C.VL_PRETRAIN_WEIGHT):
-        checkpoint = torch.load(__C.VL_PRETRAIN_WEIGHT,map_location=lambda storage, loc: storage.cuda() )
+        checkpoint = torch.load(__C.VL_PRETRAIN_WEIGHT,map_location='cpu' )
         new_dict = {}
         for k in checkpoint['state_dict']:
             if 'module.' in k:
@@ -198,8 +198,7 @@ def main_worker(gpu,__C):
         net.load_state_dict(new_dict,strict=False)
         start_epoch = 0
         if main_process(__C,gpu):
-            print("==> loaded checkpoint from {}\n".format(__C.VL_PRETRAIN_WEIGHT) +
-                  "==> epoch: {} lr: {} ".format(checkpoint['epoch'],checkpoint['lr']))
+            print("==> loaded checkpoint from {}\n".format(__C.VL_PRETRAIN_WEIGHT) )
 
 
 

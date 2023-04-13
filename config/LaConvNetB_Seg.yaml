@@ -24,8 +24,8 @@ TRAIN:
   PRINT_FREQ: 100
   LOG_PATH: './logs/laconvnet_seg'
   LOG_IMAGE: False # plot predictions on tensorboard
-  PRETRAIN_WEIGHT: './data/weights/LaConvNetB.pth'
-  VL_PRETRAIN_WEIGHT: ''
+  PRETRAIN_WEIGHT: ''
+  VL_PRETRAIN_WEIGHT: './data/weights/LaConvNetB_pt.pth'
   RESUME_PATH: ''
   SCHEDULER: 'wcosine'
   MIN_LR: 0.000001

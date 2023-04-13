@@ -4,7 +4,7 @@
 ![PyTorch](https://img.shields.io/badge/pytorch-%237732a8)
 [![MAC-Group](https://img.shields.io/badge/mac-group-orange.svg)](https://mac.xmu.edu.cn/)
 
-This is the official pyTorch implementation  of our under review paper "Towards Language-guided Visual Recognition via
+This is the official PyTorch implementation  of our under review paper "Towards Language-guided Visual Recognition via
 Dynamic Convolutions". In this paper, we propose a compact and unified Vision-Language network, termed as LaConvNets. LaConvNets can unify
 the visual recognition and multi-modal reasoning in one forward structure with a novel language-guided convolution (LaConv). On 9 benchmarks, LaConvNets demonstrate better trade-offs between efficiency and performance than existing methods.
 

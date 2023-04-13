@@ -203,14 +203,10 @@ def main_worker(gpu,__C):
 
 
     if os.path.isfile(__C.RESUME_PATH):
-        checkpoint = torch.load(__C.RESUME_PATH,map_location=lambda storage, loc: storage.cuda() )
+        checkpoint = torch.load(__C.RESUME_PATH,map_location='cpu')
         net.load_state_dict(checkpoint['state_dict'])
-        optimizer.load_state_dict(checkpoint['optimizer'])
-        # scheduler.load_state_dict(checkpoint['scheduler'])
-        start_epoch = checkpoint['epoch']
         if main_process(__C,gpu):
-            print("==> loaded checkpoint from {}\n".format(__C.RESUME_PATH) +
-                  "==> epoch: {} lr: {} ".format(checkpoint['epoch'],checkpoint['lr']))
+            print("==> loaded checkpoint from {}\n".format(__C.RESUME_PATH) )
 
     if __C.AMP:
         assert th.__version__ >= '1.6.0', \

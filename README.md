@@ -11,7 +11,7 @@ the visual recognition and multi-modal reasoning in one forward structure with a
  
 
 <p align="center">
-	<img src="./LaConvNet.jpg" width="550">
+	<img src="./misc/LaConvNet.jpg" width="550">
 </p>
 
 

@@ -26,7 +26,7 @@ pip install cupy-cuda11x==11.6
 ```
 ## Data preparation
 
--  Follow the instructions of  [DATA_PRE_README.md](https://github.com/luogen1996/SimREC/blob/main/DATA_PRE_README.md) to prepare the necessary training data.
+-  Follow the instructions of  [DATA_PRE_README.md](https://github.com/luogen1996/LaConvNet/blob/main/DATA_PRE_README.md) to prepare the necessary training data.
 
 ## Training and Evaluation 
 
@@ -40,3 +40,6 @@ python train.py --config ./config/config.yaml
 python test.py --eval-weights ./weights/det_best.pth
 ```
 4. Training log.  Logs are stored in ``./logs`` directory, which records the detailed training curve and accuracy per epoch. If you want to log the visualizations, please  set  ``LOG_IMAGE`` to ``True`` in ``config.yaml``.   
+
+## Model Zoo
+We provide the results of LaConvNets on REC and RES.   Results and pre-trained checkpoints  are available  in [Model Zoo](https://github.com/luogen1996/LaConvNet/blob/main/MODEL_ZOO.md).

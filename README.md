@@ -22,6 +22,7 @@ the visual recognition and multi-modal reasoning in one forward structure with a
 pip install -r requirements.txt
 wget https://github.com/explosion/spacy-models/releases/download/en_vectors_web_lg-2.1.0/en_vectors_web_lg-2.1.0.tar.gz -O en_vectors_web_lg-2.1.0.tar.gz
 pip install en_vectors_web_lg-2.1.0.tar.gz
+pip install cupy-cuda11x==11.6
 ```
 ## Data preparation
 

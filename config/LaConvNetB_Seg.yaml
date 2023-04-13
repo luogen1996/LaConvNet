@@ -1,0 +1,92 @@
+MODEL:
+  MODEL: 'laconvnet_seg'
+  BACKBONE: 'LaConvNetB'
+  USE_GLOVE: True
+  WORD_EMBED_SIZE: 300
+  EMBED_FREEZE: True
+  HIDDEN_SIZE: 512
+  DROPOUT_R: 0.1
+  MULTI_HEAD: 8
+  FF_SIZE: 2048
+  FLAT_GLIMPSES: 1
+  LANG_ENC: 'lstm'
+  N_SA: 1
+
+
+TRAIN:
+  GPU: [1]
+  BATCH_SIZE: 32 # total batch size on a single node if multiprocessing_distributed else batch size on one gpu
+  NUM_WORKER: 8 # same as BATCH_SIZE
+  LR: 0.0001
+  EPOCHS: 40
+  DECAY_EPOCHS: [30, 35,37] # valuable
+  LR_DECAY_R: 0.2
+  PRINT_FREQ: 100
+  LOG_PATH: './logs/laconvnet_seg'
+  LOG_IMAGE: False # plot predictions on tensorboard
+  PRETRAIN_WEIGHT: './data/weights/LaConvNetB.pth'
+  VL_PRETRAIN_WEIGHT: ''
+  RESUME_PATH: ''
+  SCHEDULER: 'wcosine'
+  MIN_LR: 0.000001
+  WARMUP_LR: 0.0000001
+  WARMUP: 3
+  USE_EMA: True
+  LABEL_SMOOTH: 0.
+  OPT: Adam
+  OPT_PARAMS: {betas: '(0.9, 0.98)', eps: '1e-9'}
+  GRAD_NORM_CLIP: 0.15
+  AMP: False
+  SEED: 123456
+
+
+DISTRIBUTED:
+  # 1 on node 1, 0 on node 0
+  NODE_ID: 0
+  # number of nodes
+  WORLD_SIZE: 1
+  # 'tcp://IP_ADDR_NODE_0:FREEPORT' if multi nodes, 'tcp://127.0.0.1:FREEPORT' if single node
+  DIST_URL: "tcp://127.0.0.1:12345"
+  MULTIPROCESSING_DISTRIBUTED: True
+  RANK: 0
+
+AUGMENTATION:
+    MULTI_SCALE:  [[416,416],]
+    FLIP_LR: True
+    MIXUP: 0.
+    CUTMIX: 0.
+    DATA_AUGMENTATION: []
+    # candidate data augmentations: ['ElasticTransform','GridDistortion','RandAugment','RandomErasing']
+
+DATA:
+  DATASET: 'refcoco'
+  MAX_TOKEN: 15
+  INPUT_SHAPE: [416,416]
+  MEAN: [0., 0., 0.]
+  STD: [1., 1., 1.]
+  ANN_PATH: {
+  'refcoco':'./data/anns/refcoco.json',
+  'refcoco+': './data/anns/refcoco+.json',
+  'refcocog': './data/anns/refcocog.json',
+  'referit': './data/anns/refclef.json',
+  'flickr': './data/anns/flickr.json',
+  'vg': './data/anns/vg.json',
+  'merge':'./data/anns/merge.json'
+  }
+
+  IMAGE_PATH: {
+              'refcoco': './data/images/train2014',
+              'refcoco+': './data/images/train2014',
+              'refcocog': './data/images/train2014',
+              'referit': './data/images/refclef',
+              'flickr': './data/images/flickr',
+              'vg':'./data/images/VG',
+              'merge':'./data/images/'
+          }
+
+  MASK_PATH: {
+  'refcoco': './data/masks/refcoco',
+  'refcoco+': './data/masks/refcoco+',
+  'refcocog': './data/masks/refcocog',
+  'referit': './data/masks/refclef'
+  }

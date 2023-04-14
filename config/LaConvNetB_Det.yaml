@@ -59,7 +59,7 @@ AUGMENTATION:
     # candidate data augmentations: ['ElasticTransform','GridDistortion','RandAugment','RandomErasing']
 
 DATA:
-  DATASET: 'refcoco+'
+  DATASET: 'refcoco'
   MAX_TOKEN: 15
   INPUT_SHAPE: [416,416]
   MEAN: [0., 0., 0.]

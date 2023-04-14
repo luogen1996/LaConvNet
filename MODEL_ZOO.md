@@ -7,22 +7,22 @@ We provide our pretrained models here.
 
 | **Model**  |   **val**   |  **testA**  |  **testB**  |  Link |
 | :-------:  | :---------: | :---------: | :---------: | :--: |
-|     LaConvNetS   |   80.26| 83.51| 75.28 |  [google drive]   |
-|       LaConvNetB  |    84.30|87.27|79.73| -   |
+|     LaConvNetS   |   80.26| 83.51| 75.28 | -   |
+|       LaConvNetB  |    84.30|87.27|79.73| [google drive](https://drive.google.com/file/d/1Qys0pGDKrnthd5v2G2lF4FRlFu62h3jw/view?usp=share_link)   |
 
 ### RefCOCO+
 
 | **Model** |   **val**   |  **testA**  |  **testB**  | Link |
 | :-------: | :---------: | :---------: | :---------: | :--: |
 |LaConvNetS |  69.82      | 73.61       |60.98       |  -   |
-|LaConvNetB |  73.25      |78.24        |63.76   |  -   |
+|LaConvNetB |  73.25      |78.24        |63.76   |  [google drive](https://drive.google.com/file/d/1sCJRrgZbKPpY_f2Hi1hsnGHcT8OoMbXv/view?usp=share_link)   |
 
 ### RefCOCOg
 
 | **Model** |     **val**   |  **test**  |    Link |
 | :-------: | :---------: | :---------: |   :--: |
 |     LaConvNetS      |        74.45|74.54|  -   |
-|       LaConvNetB        |    76.37|76.75|  -   |
+|       LaConvNetB        |    77.43|78.21|  [google drive](https://drive.google.com/file/d/1MnUp9vfdzThlrb3f9nQDPZf8l_x9yKBL/view?usp=share_link)   |
  
 
 ## RES Task

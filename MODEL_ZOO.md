@@ -1,6 +1,3 @@
-## Model
-We provide our pretrained models here.
-
 ## REC Task
 
 ### RefCOCO

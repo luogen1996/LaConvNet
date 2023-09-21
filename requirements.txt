@@ -8,3 +8,4 @@ albumentations
 pillow
 pycocotools
 pyyaml
+cupy==11.6
